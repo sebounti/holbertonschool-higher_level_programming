@@ -2,5 +2,5 @@
 
 str1 = "Holberton"
 str2 = "School"
-message = "Welcome to {}!".format(str1 + " " + str2)
-print (message)
+str1 += (" " + str2)
+print("Welcome to {}!".format(str1))
