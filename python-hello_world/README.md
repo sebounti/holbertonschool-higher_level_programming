@@ -1,5 +1,5 @@
 # Hello, World
-Project Python at **Holberton Sc at **Holberton School**. It aims to learn about variables, basics commands (print) and handle strings*.
+Project Python at **Holberton School lille**. It aims to learn about variables, basics commands (print) and handle strings*.
 
 ## Files
 | Filename | Description |
