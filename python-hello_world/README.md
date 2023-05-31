@@ -4,8 +4,6 @@ Project Python at **Holberton School lille**. It aims to learn about variables, 
 ## Files
 | Filename | Description |
 | -------- | ----------- |
-| `0-run` | Shell script that runs a Python script, where its name is stored in an environment variable |
-| `1-run_inline` | Shell script that runs a Python script, where Python code is saved in an environment variable |
 | `2-print.py` | Python script that prints a message |
 | `3-print_number.py` | Prints a message with print function, using format |
 | `4-print_float.py` | Prints a float with print function, using format and precission |
