@@ -3,9 +3,10 @@
 
 
 class Square:
-    """Represent a square.
+    """
+    Represent a square.
     Args:
-            size (int): The size of the new square.
+        size (int): The size of the new square.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -13,8 +14,8 @@ class Square:
         Initialize  square.
 
         """
-        self.__size = size  # Initialize the size of the square
-        self.__position = position  # Initialize the position of the square
+        self.size = size  # Initialize the size of the square
+        self.position = position  # Initialize the position of the square
 
     @property
     def size(self):
@@ -25,7 +26,7 @@ class Square:
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value  # Set the size of the square
