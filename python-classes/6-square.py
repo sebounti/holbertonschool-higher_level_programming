@@ -22,7 +22,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -54,10 +54,8 @@ class Square:
             print()  # Print an empty line if size is 0
             return\
 
-        for x in range(self.__position[1]):
-            print()
-            # Print empty lines before the square
-
-        for x in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
-            # Print the lines of the square
+        else:
+            print("\n" * self.__position[1], end="")
+            print("\n".join([" " * self.__position[0] +
+                             "#" * self.__size
+                             for rows in range(self.__size)]))
