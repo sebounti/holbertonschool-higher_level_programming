@@ -49,14 +49,12 @@ class Square:
 
     def area(self):
         """Calculate the area of the square."""
-        return self.__size ** 2
+        return (self.__size) ** 2
 
     def my_print(self):
         """Print the square with the '#' character."""
         if self.__size == 0:
-            print()  # Print an empty line if size is 0
-            return\
-
+            print("")  # Print an empty line if size is 0
         else:
             print("\n" * self.__position[1], end="")
             print("\n".join([" " * self.__position[0] +
