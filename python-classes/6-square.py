@@ -12,7 +12,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """
         Initialize  square.
-
         """
         self.size = size  # Initialize the size of the square
         self.position = position  # Initialize the position of the square
@@ -38,6 +37,12 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """
+        Setter
+
+        Attribute:
+            value: sets position to value if tuple is 2 integers ints
+        """
         if (type(value) is not tuple or len(value) != 2 or
                 type(value[0]) is not int or type(value[1]) is not int
                 or value[0] < 0 or value[1] < 0):
