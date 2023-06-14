@@ -1,49 +1,80 @@
->>> add_integer = __import__('0-add_integer').add_integer
+The ``0-add_integer`` module and task 0
+======================
 
->>> add_integer(0, 0)
-0
+Using ``add_integer`` function
+-------------------
 
->>> add_integer(5, 4)
-9
+Importing the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
 
->>> add_integer(26, -3)
-23
+Regular addition:
+	 >>> add_integer(2, 3)
+	 5
 
->>> add_integer(-3, 26)
-23
+Positive with negative:
+	 >>> add_integer(2, -4)
+	 -2
 
->>> add_integer(2)
-100
+Negative with positive:
+	 >>> add_integer(-6, 8)
+	 2
 
->>> add_integer(9, 0)
-9
+Addition over multiple values:
+	 >>> [add_integer(i, i ** 2) for i in range(6)]
+	 [0, 2, 6, 12, 20, 30]
 
->>> add_integer(0, 9)
-9
+Float with int:
+	 >>> add_integer(2.1, 4)
+	 6
 
->>> add_integer(-4, -4)
-0
+Int with float:
+	 >>> add_integer(5, 7.8)
+	 12
 
->>> add_integer()
-Traceback (most recent call last):
-TypeError: add_integer() missing 1 required positional argument: 'a'
->>> add_integer('a', 'b')
-Traceback (most recent call last):
-TypeError: a must be an integer
->>> add_integer('a', 4)
-Traceback (most recent call last):
-TypeError: a must be an integer
->>> add_integer('a')
-Traceback (most recent call last):
-TypeError: a must be an integer
->>> add_integer(4, 'b')
-Traceback (most recent call last):
-TypeError: b must be an integer
->>> add_integer(float('inf'), 0)
-Traceback (most recent call last):
-...
-OverflowError: cannot convert float infinity to integer
->>> add_integer(0, float('nan'))
-Traceback (most recent call last):
-...
-ValueError: cannot convert float NaN to integer
+Both float:
+	 >>> add_integer(2.45, 3.1)
+	 5
+
+Passed NaN:
+	 >>> add_integer(1, float('nan'))
+	 Traceback (most recent call last):
+	 ...
+	 ValueError: cannot convert float NaN to integer
+
+Float overflow
+	 >>> add_integer(4, float("inf"))
+	 Traceback (most recent call last):
+	 ...
+	 OverflowError: cannot convert float infinity to integer
+
+Non-number with number:
+	 >>> add_integer([1], 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: a must be an integer
+
+Checking number with non-number:
+	 >>> add_integer(3, "2")
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: b must be an integer
+
+One argument:
+	 >>> add_integer(1)
+	 99
+
+Non arguments:
+	 >>> add_integer()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Module docstring:
+	 >>> m = __import__("0-add_integer").__doc__
+	 >>> len(m) > 1
+	 True
+
+Function docstring:
+	 >>> f = __import__("0-add_integer").add_integer.__doc__
+	 >>> len(f) > 1
+	 True
