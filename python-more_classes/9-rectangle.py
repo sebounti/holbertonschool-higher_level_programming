@@ -19,6 +19,10 @@ class Rectangle:
         self. width = width
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     @property
     def height(self):
         '''Get/set the height of the rectangle.'''
@@ -86,7 +90,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
