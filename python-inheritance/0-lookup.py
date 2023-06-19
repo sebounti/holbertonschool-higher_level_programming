@@ -3,6 +3,8 @@
 This script defines a function called lookup that
 returns the list of attributes of an object.
 """
+
+
 def lookup(obj):
     """
     This function takes an object as input and
