@@ -3,6 +3,7 @@
     This module contains a class Student
 '''
 
+
 class Student:
     '''A class representing a student.'''
     def __init__(self, first_name, last_name, age):
