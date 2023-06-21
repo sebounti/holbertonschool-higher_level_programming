@@ -28,5 +28,5 @@ class Student:
                 if hasattr(self, attr):
                     copy_attrs[attr] = getattr(self, attr)
             return copy_attrs
-        else:
-            return (self.__dict__)
+
+        return (self.__dict__)
