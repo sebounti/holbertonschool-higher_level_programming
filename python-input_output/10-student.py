@@ -22,11 +22,10 @@ class Student:
         """
         Return a dictionary
         """
-        if attrs is not None and isinstance(attrs, list) and len(attrs) > 0:
-            copy_attrs = {}
-            for attr in attrs:
-                if hasattr(self, attr):
-                    copy_attrs[attr] = getattr(self, attr)
-            return copy_attrs
+
+        if isinstance(attrs, list) and all(isinstance(attr, str)
+                                           for attr in attrs):
+            return {attr: getattr(self, attr)
+                    for attr in attrs if hasattr(self, attr)}
 
         return (self.__dict__)
