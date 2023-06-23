@@ -6,6 +6,14 @@ This module returns a list of lists of integers
 
 
 def pascal_triangle(n):
+    '''
+    Returns a list of lists representing Pascal's triangle of size n
+
+    Args: n (int): Size of the Pascal's triangle
+
+    Returns: list: List of lists representing Pascal's triangle
+
+    '''
     if n <= 0:
         return []
 
