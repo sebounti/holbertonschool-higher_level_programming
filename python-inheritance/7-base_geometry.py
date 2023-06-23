@@ -5,7 +5,9 @@ Module in task 7
 
 
 class BaseGeometry:
-    """ Base Geametry """
+    """
+    Base Geametry
+    """
 
     def area(self):
         """Method not implemented"""
