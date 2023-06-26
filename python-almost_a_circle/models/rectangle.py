@@ -21,7 +21,7 @@ class Rectangle(Base):
             x (int, optional): The x-coordinate of the rectangle's position.
             y (int, optional): The y-coordinate of the rectangle's position.
             id (int, optional): The identifier to assign to the instance.
-    '''
+        '''
         super().__init__(id)
         self.width = width
         self.height = height
