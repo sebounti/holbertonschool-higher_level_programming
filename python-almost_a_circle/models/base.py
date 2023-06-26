@@ -13,7 +13,6 @@ class Base:
         id (int, optional): The identifier to assign to the instance.
         If not specified, a new identifier will be generated.
     '''
-
     def __init__(self, id=None):
         if id is not None:
             self.id = id
