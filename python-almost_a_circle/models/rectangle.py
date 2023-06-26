@@ -90,9 +90,9 @@ class Rectangle(Base):
         row = self.height
         col = self.width
 
-        print("\n", end='')
+        print(end='')
         for i in range(row):
-            print(" ", end='')
+            print(end='')
             for j in range(col):
                 print("#", end='')
             print()
