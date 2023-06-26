@@ -2,6 +2,8 @@
 '''
 This module contains the definition of the Rectangle class.
 '''
+
+
 from models.base import Base
 
 
@@ -26,7 +28,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = x
-
 
     @property
     def width(self):
