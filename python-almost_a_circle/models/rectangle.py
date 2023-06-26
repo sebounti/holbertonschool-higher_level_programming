@@ -84,3 +84,15 @@ class Rectangle(Base):
         area of the rectangle
         '''
         return self.width * self.height
+
+    def display(self):
+        """prints the shape of rectangle with "#" """
+        row = self.height
+        col = self.width
+
+        print("\n", end='')
+        for i in range(row):
+            print(" ", end='')
+            for j in range(col):
+                print("#", end='')
+            print()
