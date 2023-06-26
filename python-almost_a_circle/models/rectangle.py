@@ -2,8 +2,6 @@
 '''
 This module contains the definition of the Rectangle class.
 '''
-
-
 from models.base import Base
 
 
@@ -23,11 +21,11 @@ class Rectangle(Base):
             y (int, optional): y of the rectangle's position.
             id (int, optional): The identifier to assign to the instance.
         '''
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
-        self.y = x
+        self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
