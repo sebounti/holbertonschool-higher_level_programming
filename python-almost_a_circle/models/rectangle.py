@@ -31,14 +31,14 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         '''
         Setter for the private attribute __width.
 
         Args:
             value (int): The new value for the width.
         '''
-        self.__width = value
+        self.__width = width
 
     @property
     def height(self):
@@ -48,14 +48,14 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         '''
         Setter for the private attribute __height.
 
         Args:
             value (int): The new value for the height.
         '''
-        self.__height = value
+        self.__height = height
 
     @property
     def x(self):
@@ -65,14 +65,14 @@ class Rectangle(Base):
         return self.x
 
     @x.setter
-    def x(self, value):
+    def x(self, x):
         '''
         Setter for the private attribute __x.
 
         Args:
             value (int): The new value for the x.
         '''
-        self.__x = value
+        self.__x = x
 
     @property
     def y(self):
@@ -82,11 +82,11 @@ class Rectangle(Base):
         return self.y
 
     @y.setter
-    def y(self, value):
+    def y(self, y):
         '''
         Setter for the private attribute __y.
 
         Args:
             value (int): The new value for the y.
         '''
-        self.__y = value
+        self.__y = y
