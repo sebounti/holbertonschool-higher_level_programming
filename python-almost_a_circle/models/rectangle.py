@@ -105,5 +105,5 @@ class Rectangle(Base):
         w = self.width
         h = self.height
 
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,\
-                                              _id, x, y, w, h)
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
+                                                _id, x, y, w, h)
