@@ -96,3 +96,14 @@ class Rectangle(Base):
             for j in range(col):
                 print("#", end='')
             print()
+
+    def __str__(self):
+        """ return a string """
+        _id = self.id
+        x = self.x
+        y = self.y
+        w = self.width
+        h = self.height
+
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
+                                              _id, x, y, w, h)
