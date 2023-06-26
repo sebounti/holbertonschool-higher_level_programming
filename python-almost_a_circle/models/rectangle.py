@@ -89,10 +89,12 @@ class Rectangle(Base):
         """prints the shape of rectangle with "#" """
         row = self.height
         col = self.width
+        x = self.x
+        y = self.y
 
-        print(end='')
+        print("\n" * y, end='')
         for i in range(row):
-            print(end='')
+            print(" " * x, end='')
             for j in range(col):
                 print("#", end='')
             print()
