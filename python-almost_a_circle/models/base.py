@@ -14,6 +14,12 @@ class Base:
         If not specified, a new identifier will be generated.
     '''
     def __init__(self, id=None):
+        """
+            class constructor
+
+            Args:
+                id(int): public instance attribute
+        """
         if id is not None:
             self.id = id
         else:
