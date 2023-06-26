@@ -10,7 +10,6 @@ class Rectangle(Base):
     Define Rectangle
 
     '''
-
     def __init__(self, width, height, x=0, y=0, id=None):
         '''
         Constructor for the Rectangle class.
@@ -18,8 +17,8 @@ class Rectangle(Base):
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the rectangle's position.
-            y (int, optional): The y-coordinate of the rectangle's position.
+            x (int, optional): x of the rectangle's position.
+            y (int, optional): y of the rectangle's position.
             id (int, optional): The identifier to assign to the instance.
         '''
         super().__init__(id)
