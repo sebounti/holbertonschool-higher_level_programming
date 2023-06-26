@@ -7,6 +7,12 @@ from .base import Base
 
 class Rectangle(Base):
     '''
+    Define Rectangle
+
+    '''
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        '''
     Constructor for the Rectangle class.
 
         Args:
@@ -16,13 +22,12 @@ class Rectangle(Base):
             y (int, optional): The y-coordinate of the rectangle's position.
             id (int, optional): The identifier to assign to the instance.
     '''
-    def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = x
 
-        super().__init__(id)
 
     @property
     def width(self):
