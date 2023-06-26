@@ -5,7 +5,6 @@ This file contains the definition of the Base class.
 
 
 class Base:
-    __nb_objects = 0
     '''
     Constructor of the Base class.
 
@@ -13,6 +12,8 @@ class Base:
         id (int, optional): The identifier to assign to the instance.
         If not specified, a new identifier will be generated.
     '''
+    __nb_objects = 0
+
     def __init__(self, id=None):
         """
             class constructor
