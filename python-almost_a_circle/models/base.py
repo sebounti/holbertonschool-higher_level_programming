@@ -35,5 +35,4 @@ class Base:
         if (list_dictionaries is None or len(list_dictionaries)) == 0:
             return ("[]")
         else:
-            json_string = json.dumps([obj for obj in list_dictionaries])
-            return (json_string)
+            return json.dumps(list_dictionaries)
