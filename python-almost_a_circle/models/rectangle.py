@@ -125,3 +125,15 @@ class Rectangle(Base):
         if kwargs is not None:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
+
+    def to_dictionary(self):
+        """
+         Returns a dictionary representation of the Square object.
+        """
+        return {
+                "x": self.x,
+                "y": self.y,
+                "id": self.id,
+                "height": self.height,
+                "width": self.width,
+                     }
