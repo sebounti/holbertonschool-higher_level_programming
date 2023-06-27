@@ -110,7 +110,7 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 _id, x, y, w, h)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update attributes with variable orderly arguments"""
         if args is not None and len(args) > 0:
 
@@ -121,3 +121,7 @@ class Rectangle(Base):
             self.height = args[2] if num_args > 2 else self.height
             self.x = args[3] if num_args > 3 else self.x
             self.y = args[4] if num_args > 4 else self.y
+
+        if kwargs is not None:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
