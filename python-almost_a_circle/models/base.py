@@ -30,7 +30,7 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """
-        Converts a list of dictionaries to a JSON string.
+            Converts a list of dictionaries to a JSON string.
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return ("[]")
