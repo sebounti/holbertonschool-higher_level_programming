@@ -40,3 +40,19 @@ class Square (Rectangle):
 
         return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
                                              _id, x, y, _size)
+
+    def update(self, *args, **kwargs):
+        """Update attributes with variable orderly arguments"""
+
+        if (len(args) > 0):
+
+            num_args = min(len(args), 4)
+
+            self.id = args[0]
+            self.size = args[1] if num_args > 1 else self.size
+            self.x = args[2] if num_args > 2 else self.x
+            self.y = args[3] if num_args > 3 else self.y
+
+        if kwargs is not None:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
