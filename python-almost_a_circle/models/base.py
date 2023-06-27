@@ -34,5 +34,6 @@ class Base:
         """
         if (list_dictionaries is None or len(list_dictionaries)) == 0:
             return ("[]")
-        json_string = json.dumps([obj for obj in list_dictionaries])
-        return (json_string)
+        else:
+            json_string = json.dumps([obj for obj in list_dictionaries])
+            return (json_string)
