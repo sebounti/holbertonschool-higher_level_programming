@@ -109,3 +109,15 @@ class Rectangle(Base):
 
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 _id, x, y, w, h)
+
+    def update(self, *args):
+
+        if args is not None and len(args) > 0:
+
+            num_args = min(len(args), 5)
+
+            self.id = args[0]
+            self.width = args[1] if num_args > 1 else self.width
+            self.height = args[2] if num_args > 2 else self.height
+            self.x = args[3] if num_args > 3 else self.x
+            self.y = args[4] if num_args > 4 else self.y
