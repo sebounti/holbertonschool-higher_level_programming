@@ -47,14 +47,15 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Change json format in to a file
+        """
+        Change json format in to a file
 
         Args:
-                list_objs (list): instance de Base
+            list_objs (list): instance de Base
         """
         filename = cls.__name__ + ".json"
         json_list = []
         if list_objs is not None:
             json_list = [obj.to_dictionary() for obj in list_objs]
-        with open(filename, "w")as my_file:
+        with open(filename, "w") as my_file:
             json.dump(json_list, my_file)
