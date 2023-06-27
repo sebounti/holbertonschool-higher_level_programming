@@ -32,7 +32,7 @@ class Base:
         """
         Converts a list of dictionaries to a JSON string.
         """
-        if list_dictionaries is None or len == 0:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return ("[]")
         else:
             return json.dumps(list_dictionaries)
