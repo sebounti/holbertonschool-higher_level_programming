@@ -111,7 +111,7 @@ class Rectangle(Base):
                                                 _id, x, y, w, h)
 
     def update(self, *args):
-
+        """Update attributes with variable orderly arguments"""
         if args is not None and len(args) > 0:
 
             num_args = min(len(args), 5)
