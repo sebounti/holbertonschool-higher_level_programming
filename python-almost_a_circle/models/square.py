@@ -22,6 +22,8 @@ class Square (Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+    moq
+
     def __str__(self):
         '''Returns a string representation of the Square.'''
         _id = self.id
