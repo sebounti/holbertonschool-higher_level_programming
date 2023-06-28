@@ -59,3 +59,11 @@ class Base:
             json_list = [obj.to_dictionary() for obj in list_objs]
         with open(filename, "w") as my_file:
             my_file.write(cls.to_json_string(json_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        ''''''
+        if json_string is None or json_string is []:
+            return ("[]")
+        else:
+           return json.loads(json_string)
