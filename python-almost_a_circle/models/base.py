@@ -64,4 +64,6 @@ class Base:
         '''
         Returns the python object of json string representation
         '''
+        if json_string is None or len(json_string) == 0:
+            json_string = "[]"
         return json.loads(json_string)
