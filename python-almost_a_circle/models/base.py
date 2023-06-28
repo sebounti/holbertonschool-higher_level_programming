@@ -3,7 +3,6 @@
 This file contains the definition of the Base class.
 """
 import json
-import os
 
 
 class Base:
@@ -63,10 +62,6 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         '''
-        Args:
-            json_string (_type_): _description_
+        Returns the python object of json string representation
         '''
-        if json_string is None or json_string is []:
-            return ("[]")
-        else:
-           return json.loads(json_string)
+        return json.loads(json_string)
