@@ -62,7 +62,10 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        ''''''
+        '''
+        Args:
+            json_string (_type_): _description_
+        '''
         if json_string is None or json_string is []:
             return ("[]")
         else:
