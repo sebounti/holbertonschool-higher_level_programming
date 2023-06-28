@@ -67,3 +67,16 @@ class Base:
         if json_string is None or len(json_string) == 0:
             json_string = "[]"
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''
+        Creates a new instance of the Rectangle class using the provided
+        dictionary.
+        '''
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1,)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
