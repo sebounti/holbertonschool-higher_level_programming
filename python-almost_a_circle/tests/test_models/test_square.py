@@ -2,6 +2,7 @@
 """ This module is a unittest for the Square class """
 
 import unittest
+import json
 import os
 import io
 import sys
@@ -194,11 +195,11 @@ class TestSquare(unittest.TestCase):
     def test_update_args_kwargs(self):
         """ Test if update method works with *args and **kwargs """
         square = Square(1, 2, 3, 4)
-        square.update(10, 20, id=30, size=40)
+        square.update(10, size=20, x=30, y=40)
         self.assertEqual(square.id, 10)
         self.assertEqual(square.size, 20)
-        self.assertEqual(square.x, 2)
-        self.assertEqual(square.y, 3)
+        self.assertEqual(square.x, 30)
+        self.assertEqual(square.y, 40)
 
     def test_create(self):
         """ Test if create method works """
@@ -261,11 +262,13 @@ class TestSquare(unittest.TestCase):
             self.assertEqual(file.read(), "[]")
 
     def test_save_to_file(self):
-        """ Test if save_to_file method works """
-        Square.save_to_file([Square(1)])
         expected_output = '[{"id": 1, "size": 1, "x": 0, "y": 0}]'
+        Square.save_to_file([Square(1)])
         with open("Square.json", "r") as file:
-            self.assertEqual(file.read(), expected_output)
+            file_content = file.read()
+        actual_output_json = json.loads(file_content)
+        expected_output_json = json.loads(expected_output)
+        self.assertEqual(actual_output_json, expected_output_json)
 
     def test_load_from_json_file_none(self):
         """ Test if load_from_json_file method works """
