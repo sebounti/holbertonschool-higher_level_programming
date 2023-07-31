@@ -13,7 +13,7 @@ if __name__ == "__main__":
 # Créer un objet curseur pour exécuter des requêtes SQL
     cur = db.cursor()
 
-# Exécuter la requête SQL pour sélectionner toutes les lignes de la table "states"
+# Exécuter la requête SQL elle sélectionner les lignes de la table "states"
     cur.execute("SELECT * FROM states ORDER BY id ASC;")
 # Récupérer toutes les lignes résultantes de la requête dans une liste
     states = cur.fetchall()
