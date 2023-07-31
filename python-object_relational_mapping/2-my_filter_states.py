@@ -14,8 +14,11 @@ if __name__ == "__main__":
 
     # Utiliser un paramètre de liaison pour la valeur de la requête SQL
     state_name_searched = sys.argv[4]
+
     query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY states.id ASC"
-    cur.execute(query, (state_name_searched,))
+    parameters = (state_name_searched,)
+
+    cur.execute(query, parameters)
 
     states = cur.fetchall()
 
