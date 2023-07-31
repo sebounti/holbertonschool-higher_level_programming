@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost", port=3306,
@@ -12,10 +13,9 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    # Utiliser un paramètre de liaison pour la valeur de la requête SQL
     state_name_searched = sys.argv[4]
 
-    query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name LIKE  %s ORDER BY id ASC"
     parameters = (state_name_searched,)
 
     cur.execute(query, parameters)
