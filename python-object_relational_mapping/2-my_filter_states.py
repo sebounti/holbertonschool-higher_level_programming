@@ -12,11 +12,14 @@ if __name__ == "__main__":
             password=argv[2], db=argv[3])
 
     cur = db.cursor()
-
     cur.execute(
         "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", (argv[4],))
 
     states = cur.fetchall()
 
     for state in states:
-        print(state)
+        if state[1] == argv[4]:
+            print(state)
+
+    cur.close()
+    db.close()
