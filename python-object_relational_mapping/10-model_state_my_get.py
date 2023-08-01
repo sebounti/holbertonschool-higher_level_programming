@@ -26,7 +26,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Query
-    state_name_searched = sys.argv[4]
+    state_name_searched = argv[4]
 
     query = session.query(State).filter_by(name=state_name_searched).first()
 
