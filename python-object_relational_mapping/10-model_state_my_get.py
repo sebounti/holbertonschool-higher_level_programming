@@ -10,10 +10,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(sys.argv[1], sys.argv[2],
-                                  sys.argv[3], sys.argv[4]),
-                           pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(sys.argv[1], sys.argv[2],
+                                   sys.argv[3]), pool_pre_ping=True)
 
     # Initialize engine
     Base.metadata.create_all(engine)
@@ -21,19 +20,13 @@ if __name__ == "__main__":
     # Initialize session
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).all()
-
-    # Create all name for states
-    list_state = []
-    for state in query:
-        list_state.append(state.name)
 
     # Query
-    query = session.query(State).\
-        filter(State.name == "{}".format(sys.argv[4], )).first()
+    state_name_searched = sys.argv[4]
+    query = session.query(State).filter_by(name=state_name_searched).first()
 
     # Conditions
-    if sys.argv[4] not in list_state:
+    if query is None:
         print("Not found")
     else:
         print(query.id)
