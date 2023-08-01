@@ -9,11 +9,11 @@ from sqlalchemy.orm import relationship
 Base = declarative_base()
 
 
-class City(Base):']'
+class City(Base):
     """Inherits from Base
 
-    Args:
-        Base (class): inherits from Base
+        Args:
+            Base (class): inherits from Base
     """
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, nullable=False,
