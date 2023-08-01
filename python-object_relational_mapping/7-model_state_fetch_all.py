@@ -21,7 +21,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # requête pour récup tous les enregistrements de la table State triés par id
+    # requête pour récup tous les enregistrements de la table State triés parid
     query = session.query(State).order_by(State.id).all()
 
     # Afficher le résultat de la requête
