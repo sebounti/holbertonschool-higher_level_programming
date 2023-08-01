@@ -26,10 +26,10 @@ if __name__ == "__main__":
     query = session.query(State).filter_by(name=state_name_searched).first()
 
     # Conditions
-    if query is None:
-        print("Not found")
+    if query:
+        print("{:d}".format(query.id))
     else:
-        print(query.id)
+        print("Not found")
 
     # Close session
     session.close()
