@@ -17,6 +17,9 @@ if __name__ == "__main__":
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
 
+    # Initialiser la base de données
+    Base.metadata.create_all(engine)
+
     # Initialiser la session
     Session = sessionmaker(bind=engine)
     session = Session()
