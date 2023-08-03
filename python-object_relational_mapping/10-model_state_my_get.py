@@ -17,19 +17,13 @@ if __name__ == "__main__":
     db = argv[3]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(user, passwd, db), pool_pre_ping=True)
-
-    # Initialize engine
     Base.metadata.create_all(engine)
-
-    # Initialize session
     Session = sessionmaker(bind=engine)
     session = Session()
 
     # Query
     state_name_searched = argv[4]
-
     query = session.query(State).filter_by(name=state_name_searched).first()
-
     # Conditions
     if query:
         print("{:d}".format(query.id))
